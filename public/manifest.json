@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
   "version": "0.0.1",
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "description": "Sample application showing how to create an extension with Create React App",
+  "short_name": "Job Toast",
+  "name": "Job Toast",
+  "description": "Organize You're Job Search",
   "browser_action": {
-    "default_title": "CRE",
+    "default_title": "Job Toast",
     "default_popup": "popup.html"
   },
   "background": {
@@ -18,11 +18,14 @@
     }
   ],
   "icons": {
-    "16": "img/icon-16.png",
-    "48": "img/icon-48.png",
-    "128": "img/icon-128.png"
+    "16": "img/toaster.png",
+    "48": "img/toaster.png",
+    "128": "img/toaster.png"
   },
   "options_page": "options.html",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "tabs"],
+  "externally_connectable": {
+    "matches": ["*://*.http://localhost:5000//*"]
+  },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
